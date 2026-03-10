@@ -1,0 +1,98 @@
+{
+  "site_key": "familia",
+  "lawyer_type": "Derecho de Familia",
+  "name": "Laura Martínez - Derecho de Familia",
+  "tagline": "Acompañamiento legal con calidez en momentos difíciles",
+  "whatsapp_number": "573001234567",
+  "city": "Medellín",
+  "phone": "+57 300 123 4567",
+  "colors": {
+    "primary": "#553c9a",
+    "primaryLight": "#6b46c1",
+    "accent": "#d53f8c",
+    "text": "#2d3748",
+    "background": "#faf5ff"
+  },
+  "images": {
+    "hero": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1200",
+    "profile": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400"
+  },
+  "hero": {
+    "title": "¿Estás pasando por un divorcio o tema de custodia?",
+    "subtitle": "Te acompaño con claridad y respeto. Sin juzgar, con opciones reales.",
+    "cta_text": "Consultar mi situación",
+    "whatsapp_text": "Escribir por WhatsApp"
+  },
+  "trust_indicators": [
+    { "text": "Más de 200 casos asesorados", "icon": "experience" },
+    { "text": "Consultas confidenciales", "icon": "confidential" },
+    { "text": "Atención personalizada", "icon": "personalized" },
+    { "text": "Respuesta rápida", "icon": "fast" }
+  ],
+  "problem_awareness": {
+    "title": "¿Estás viviendo alguna de estas situaciones?",
+    "subtitle": "Haz clic en la que se acerque a tu caso.",
+    "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800",
+    "items": [
+      { "label": "Divorcio o separación", "whatsapp_msg": "Hola, necesito asesoría para divorcio o separación." },
+      { "label": "Custodia de mis hijos", "whatsapp_msg": "Hola, tengo dudas sobre custodia de mis hijos." },
+      { "label": "Pensión alimenticia", "whatsapp_msg": "Hola, necesito orientación sobre pensión alimenticia." }
+    ]
+  },
+  "why_trust_title": "Por qué confiar en mi asesoría",
+  "why_trust_subtitle": "Compromiso con tu caso.",
+  "why_trust_me": [
+    { "title": "Orientación transparente", "description": "Te explico opciones y plazos con claridad." },
+    { "title": "Lenguaje claro", "description": "Sin tecnicismos, para que entiendas cada paso." },
+    { "title": "Análisis personalizado", "description": "Cada situación es distinta; revisamos tu caso." }
+  ],
+  "education": {
+    "title": "Lo que conviene que sepas",
+    "subtitle": "Información clara para tomar decisiones.",
+    "items": [
+      "El divorcio puede ser de mutuo acuerdo o contencioso; te explico las diferencias.",
+      "La custodia y el régimen de visitas buscan el bienestar de los menores.",
+      "La pensión alimenticia puede fijarse o modificarse según las circunstancias."
+    ]
+  },
+  "help_buttons": [
+    { "id": "divorcio", "label": "Divorcio", "whatsapp_msg": "Hola, necesito asesoría para un proceso de divorcio.", "icon": "document" },
+    { "id": "custodia", "label": "Custodia de hijos", "whatsapp_msg": "Hola, tengo dudas sobre custodia o régimen de visitas.", "icon": "shield" },
+    { "id": "pension", "label": "Pensión alimenticia", "whatsapp_msg": "Hola, necesito orientación sobre pensión alimenticia.", "icon": "money" },
+    { "id": "union", "label": "Unión marital / herencias", "whatsapp_msg": "Hola, consulta sobre unión marital o herencias en familia.", "icon": "briefcase" },
+    { "id": "otro", "label": "Otro tema de familia", "whatsapp_msg": "Hola, tengo una consulta de derecho de familia.", "icon": "document" }
+  ],
+  "services": [
+    { "title": "Divorcio", "description": "De mutuo acuerdo o contencioso. Te guío en todo el proceso.", "icon": "document", "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600" },
+    { "title": "Custodia y visitas", "description": "Régimen de cuidado y visitas para el bienestar de los hijos.", "icon": "shield" },
+    { "title": "Pensión alimenticia", "description": "Fijación, modificación o cobro de pensiones.", "icon": "money", "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600" },
+    { "title": "Unión marital y herencias", "description": "Liquidación de sociedad patrimonial y sucesiones.", "icon": "briefcase" }
+  ],
+  "timeline_title": "Así trabajamos tu caso",
+  "timeline_steps": [
+    { "title": "Consulta inicial", "desc": "Me cuentas tu situación con tranquilidad." },
+    { "title": "Análisis legal", "desc": "Te explico las opciones legales en lenguaje claro." },
+    { "title": "Estrategia", "desc": "Definimos juntos el camino que prefieres." },
+    { "title": "Representación", "desc": "Te acompaño en cada paso del proceso." },
+    { "title": "Seguimiento", "desc": "Buscamos una solución que priorice el bienestar." }
+  ],
+  "cases_title": "Situaciones que acompaño",
+  "cases": [
+    "Divorcio de mutuo acuerdo o contencioso",
+    "Custodia, visitas y cuidado de los hijos",
+    "Pensión alimenticia para hijos o cónyuge",
+    "Unión marital de hecho y liquidación",
+    "Sucesiones y herencias en el ámbito familiar"
+  ],
+  "profile_title": "Sobre mí",
+  "profile_text": "Muchos de mis clientes llegan preocupados por el futuro de sus hijos o por no saber cómo seguir. Mi trabajo es analizar tu situación y explicarte con claridad cuáles son tus opciones. Te explico qué esperar, plazos y costos, para que tomes decisiones informadas.",
+  "profile_image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400",
+  "testimonials": [
+    { "name": "Sandra M.", "city": "Medellín", "text": "Me acompañó en mi divorcio con mucho respeto. Recomendada." },
+    { "name": "Miguel R.", "city": "Bogotá", "text": "Resolvimos el tema de custodia. Muy profesional." }
+  ],
+  "cta_title": "Cuéntanos tu situación y te diremos si podemos ayudarte",
+  "cta_subtitle": "Sin compromiso. Escríbenos por WhatsApp o usa el formulario.",
+  "contact_title": "Formulario de contacto",
+  "contact_intro": "Completa los datos y te respondemos a la brevedad."
+}

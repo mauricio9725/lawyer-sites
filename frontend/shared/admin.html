@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel - Consultas</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 0 auto; padding: 1.5rem; }
+    h1 { font-size: 1.5rem; }
+    .login-box { margin: 2rem 0; }
+    .login-box input { padding: 0.5rem; margin-right: 0.5rem; }
+    .login-box button { padding: 0.5rem 1rem; cursor: pointer; }
+    .error { color: #c53030; margin-top: 0.5rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem; }
+    th, td { border: 1px solid #ddd; padding: 0.5rem; text-align: left; }
+    th { background: #f5f5f5; }
+    .filters { margin: 1rem 0; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .filters input, .filters select { padding: 0.4rem; }
+    .hidden { display: none; }
+    .logout { margin-left: auto; }
+  </style>
+</head>
+<body>
+  <div id="login-screen" class="login-box">
+    <h1>Panel de consultas</h1>
+    <p>Usuario: <input type="text" id="user" placeholder="admin"> Contraseña: <input type="password" id="pass" placeholder=""> <button type="button" id="btn-login">Entrar</button></p>
+    <p class="error" id="login-error"></p>
+  </div>
+  <div id="panel-screen" class="hidden">
+    <h1>Consultas recibidas <button type="button" class="logout" id="btn-logout">Cerrar sesión</button></h1>
+    <div class="filters">
+      <label>Sitio <select id="filter-site"><option value="">Todos</option><option value="laboral">laboral</option><option value="familia">familia</option><option value="penal">penal</option><option value="civil">civil</option><option value="general">general</option></select></label>
+      <label>Desde <input type="date" id="filter-from"></label>
+      <label>Hasta <input type="date" id="filter-to"></label>
+      <button type="button" id="btn-filter">Filtrar</button>
+    </div>
+    <table>
+      <thead><tr><th>Fecha</th><th>Sitio</th><th>Nombre</th><th>Email</th><th>Teléfono</th><th>Tipo caso</th><th>Mensaje</th></tr></thead>
+      <tbody id="contacts-body"></tbody>
+    </table>
+  </div>
+  <script>
+    var API_BASE = (window.API_BASE || '').replace(/\/$/, '');
+    function getToken() { return localStorage.getItem('lawyer_admin_token'); }
+    function setToken(t) { if (t) localStorage.setItem('lawyer_admin_token', t); else localStorage.removeItem('lawyer_admin_token'); }
+    function showLogin() { document.getElementById('login-screen').classList.remove('hidden'); document.getElementById('panel-screen').classList.add('hidden'); }
+    function showPanel() { document.getElementById('login-screen').classList.add('hidden'); document.getElementById('panel-screen').classList.remove('hidden'); loadContacts(); }
+    function login() {
+      var user = document.getElementById('user').value.trim();
+      var pass = document.getElementById('pass').value;
+      document.getElementById('login-error').textContent = '';
+      fetch(API_BASE + '/api/admin/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ username: user, password: pass }) })
+        .then(function(r) { if (!r.ok) throw new Error('Credenciales incorrectas'); return r.json(); })
+        .then(function(d) { setToken(d.access_token); showPanel(); })
+        .catch(function() { document.getElementById('login-error').textContent = 'Usuario o contraseña incorrectos.'; });
+    }
+    function loadContacts() {
+      var token = getToken();
+      if (!token) { showLogin(); return; }
+      var q = [];
+      var site = document.getElementById('filter-site').value;
+      var from = document.getElementById('filter-from').value;
+      var to = document.getElementById('filter-to').value;
+      if (site) q.push('site_key=' + encodeURIComponent(site));
+      if (from) q.push('from_date=' + encodeURIComponent(from));
+      if (to) q.push('to_date=' + encodeURIComponent(to));
+      var url = API_BASE + '/api/admin/contacts' + (q.length ? '?' + q.join('&') : '');
+      fetch(url, { headers: { 'Authorization': 'Bearer ' + token } })
+        .then(function(r) { if (r.status === 401) { setToken(null); showLogin(); return []; } return r.json(); })
+        .then(function(list) {
+          if (!Array.isArray(list)) return;
+          var tbody = document.getElementById('contacts-body');
+          tbody.innerHTML = '';
+          list.forEach(function(c) {
+            var tr = document.createElement('tr');
+            tr.innerHTML = '<td>' + (c.created_at ? c.created_at.slice(0, 19).replace('T', ' ') : '') + '</td><td>' + (c.site_key || '') + '</td><td>' + (c.name || '') + '</td><td>' + (c.email || '') + '</td><td>' + (c.phone || '') + '</td><td>' + (c.case_type || '') + '</td><td>' + (c.message || '').slice(0, 80) + '</td>';
+            tbody.appendChild(tr);
+          });
+        });
+    }
+    document.getElementById('btn-login').addEventListener('click', login);
+    document.getElementById('btn-logout').addEventListener('click', function() { setToken(null); showLogin(); });
+    document.getElementById('btn-filter').addEventListener('click', loadContacts);
+    if (getToken()) showPanel(); else showLogin();
+  </script>
+</body>
+</html>

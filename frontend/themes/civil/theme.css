@@ -1,0 +1,10 @@
+/* Civil: equilibrado, elegante – azul oscuro, dorado suave, gris */
+:root {
+  --primary: #1e3a5f;
+  --primaryLight: #2c5282;
+  --accent: #b8860b;
+  --text: #2d3748;
+  --textMuted: #4a5568;
+  --bg: #f8f9fa;
+  --white: #ffffff;
+}

@@ -1,0 +1,493 @@
+/**
+ * Laboral – Corporativo moderno
+ * Hero grande, trust indicators tipo estadísticas, grid profesional, sin bloques vacíos.
+ */
+body.design-laboral {
+  margin: 0;
+  background: var(--bg);
+}
+
+body.design-laboral main .wrap {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ----- Header: sticky, nav, scroll effect ----- */
+body.design-laboral .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 16px rgba(26, 54, 93, 0.08);
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+body.design-laboral .site-header.scrolled {
+  background: rgba(255,255,255,0.98);
+  box-shadow: 0 4px 20px rgba(26, 54, 93, 0.12);
+}
+body.design-laboral .header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+body.design-laboral .header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+body.design-laboral .header-lawyer-photo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid rgba(26, 54, 93, 0.15);
+}
+body.design-laboral .header-lawyer-photo { display: none; }
+body.design-laboral .header-lawyer-photo[src]:not([src=""]) { display: block; }
+body.design-laboral .site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+body.design-laboral .site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  padding: 0.35rem 0;
+  transition: color 0.2s ease;
+}
+body.design-laboral .site-nav a:hover { color: var(--primary); }
+body.design-laboral .hero-lawyer-presence {
+  margin-bottom: 1.25rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  display: inline-block;
+  backdrop-filter: blur(4px);
+}
+body.design-laboral .hero-lawyer-name {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+body.design-laboral .hero-lawyer-spec {
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.92);
+  margin: 0.2rem 0 0 0;
+  font-weight: 500;
+}
+body.design-laboral .hero-ver-servicios {
+  display: inline-block;
+  margin-top: 1rem;
+  color: rgba(255,255,255,0.95);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: var(--radius);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+body.design-laboral .hero-ver-servicios:hover {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+body.design-laboral .hero-scroll-indicator {
+  display: inline-block;
+  margin-top: 1rem;
+  color: rgba(255,255,255,0.8);
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+@media (prefers-reduced-motion: no-preference) {
+  body.design-laboral .hero-scroll-indicator {
+    animation: bounceY 2s ease-in-out infinite;
+  }
+}
+@keyframes bounceY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* ----- Hero: 80vh mínimo, imagen + overlay, título 48–64px ----- */
+body.design-laboral .hero {
+  min-height: 80vh;
+  padding: 5rem 1.5rem;
+  background-color: var(--primary);
+  background-size: cover;
+  background-position: center;
+}
+body.design-laboral .hero::before {
+  background: linear-gradient(135deg, rgba(30, 58, 95, 0.4) 0%, rgba(44, 82, 130, 0.35) 100%);
+}
+body.design-laboral .hero .hero-inner {
+  max-width: 720px;
+}
+body.design-laboral .hero h1 {
+  font-size: clamp(3rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+body.design-laboral .hero .subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+}
+body.design-laboral .hero .btn-primary {
+  background: var(--primaryLight);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+}
+body.design-laboral .hero .btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+}
+
+/* ----- Trust: strip tipo estadísticas, sin vacío ----- */
+body.design-laboral .trust {
+  padding: 2.5rem 1.5rem;
+  background: var(--white);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+body.design-laboral .trust .wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  max-width: 960px;
+  text-align: center;
+}
+body.design-laboral .trust-item {
+  padding: 1rem;
+  border-radius: var(--radius);
+  background: var(--bg);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+body.design-laboral .trust-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(26, 54, 93, 0.12);
+}
+body.design-laboral .trust-item .trust-icon {
+  background: var(--primary);
+  color: var(--white);
+  width: 48px;
+  height: 48px;
+  font-size: 1.25rem;
+}
+
+/* ----- Secciones: padding 80px, títulos 32–40px, texto 16–18px ----- */
+body.design-laboral section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+body.design-laboral .section-title {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+body.design-laboral .section-subtitle,
+body.design-laboral .help-card,
+body.design-laboral .service-card p,
+body.design-laboral .profile-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Help cards: hover y micro interacción ----- */
+body.design-laboral .help {
+  background: var(--bg);
+}
+body.design-laboral .help-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.2s ease;
+}
+body.design-laboral .help-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(26, 54, 93, 0.12);
+}
+
+/* Problem: fondo con imagen sutil ----- */
+body.design-laboral .problem-awareness {
+  background-image: linear-gradient(180deg, rgba(247,250,252,0.92) 0%, rgba(255,255,255,0.97) 100%), url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--bgAlt);
+}
+@media (prefers-reduced-motion: reduce) {
+  body.design-laboral .reveal-section { transition: opacity 0.4s ease; }
+  body.design-laboral .reveal-section.reveal-visible { transform: none; }
+}
+body.design-laboral .problem-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+body.design-laboral .problem-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(26, 54, 93, 0.15);
+}
+
+/* Why trust: grid con iconos ----- */
+body.design-laboral .why-trust {
+  background: var(--white);
+}
+body.design-laboral .why-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+body.design-laboral .why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(26, 54, 93, 0.1);
+}
+
+/* Services: card images, zoom on hover ----- */
+body.design-laboral .services {
+  background: var(--bg);
+}
+body.design-laboral .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.75rem;
+  justify-items: stretch;
+}
+body.design-laboral .service-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+body.design-laboral .service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(26, 54, 93, 0.12);
+}
+body.design-laboral .service-card .service-card-image {
+  transition: transform 0.4s ease;
+}
+body.design-laboral .service-card:hover .service-card-image {
+  transform: scale(1.05);
+}
+
+/* Timeline: línea animada ----- */
+body.design-laboral .timeline {
+  background: var(--white);
+}
+body.design-laboral .timeline-item {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Education, Cases: balanced layout, subtle visuals ----- */
+body.design-laboral .education {
+  background: var(--bgAlt);
+  position: relative;
+}
+body.design-laboral .education::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(26, 54, 93, 0.08), transparent);
+}
+body.design-laboral .cases {
+  background: var(--white);
+}
+body.design-laboral .cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+  justify-items: stretch;
+}
+body.design-laboral .case-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-left: 4px solid var(--primaryLight);
+}
+body.design-laboral .case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(26, 54, 93, 0.1);
+  border-left-color: var(--accent);
+}
+body.design-laboral .case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(26, 54, 93, 0.1);
+}
+
+/* Profile: imagen + texto en grid ----- */
+body.design-laboral .profile .wrap {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+body.design-laboral .profile-photo {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  height: auto;
+}
+body.design-laboral .profile {
+  background: var(--white);
+}
+
+/* Testimonials, CTA, Contact ----- */
+body.design-laboral .testimonials {
+  background: var(--bg);
+}
+body.design-laboral .cta-strong {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primaryLight) 100%);
+}
+body.design-laboral .contact {
+  background: var(--white);
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.04);
+}
+body.design-laboral .site-nav a:focus-visible,
+body.design-laboral .hero-ver-servicios:focus-visible,
+body.design-laboral .floating-lawyer-card__wa:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Scroll reveal ----- */
+body.design-laboral .reveal-section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+body.design-laboral .reveal-section.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Botones: micro interacción ----- */
+body.design-laboral .btn-whatsapp:hover,
+body.design-laboral button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* ----- Floating lawyer card ----- */
+body.design-laboral .floating-lawyer-card {
+  position: fixed;
+  right: 20px;
+  bottom: 120px;
+  width: 220px;
+  padding: 1.25rem;
+  min-height: 140px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px rgba(26, 54, 93, 0.15);
+  z-index: 150;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, box-shadow 0.25s ease;
+}
+body.design-laboral .floating-lawyer-card.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+body.design-laboral .floating-lawyer-card:hover {
+  box-shadow: 0 12px 40px rgba(26, 54, 93, 0.2);
+}
+body.design-laboral .floating-lawyer-card__photo {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+body.design-laboral .floating-lawyer-card__name {
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0 0 0.25rem 0;
+  text-align: center;
+  color: var(--text);
+}
+body.design-laboral .floating-lawyer-card__spec {
+  font-size: 0.8125rem;
+  color: var(--textMuted);
+  margin: 0 0 0.75rem 0;
+  text-align: center;
+}
+/* WhatsApp: same as Laboral (styles in base.css) */
+body.design-laboral .floating-lawyer-card__wa:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ----- Lawyer tooltip ----- */
+body.design-laboral .lawyer-tooltip {
+  position: fixed;
+  z-index: 300;
+  width: 240px;
+  padding: 1rem;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 40px rgba(26, 54, 93, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+}
+body.design-laboral .lawyer-tooltip.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+body.design-laboral .lawyer-tooltip__photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+body.design-laboral .lawyer-tooltip__text {
+  font-size: 0.875rem;
+  color: var(--text);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+/* Sin segundo icono WhatsApp en el tooltip: solo el verde de la tarjeta flotante */
+body.design-laboral .lawyer-tooltip__wa {
+  display: none;
+}
+
+/* ----- Profile: larger photo, stronger hierarchy ----- */
+body.design-laboral .profile-photo-wrap {
+  max-width: 320px;
+}
+body.design-laboral .profile-photo {
+  width: 100%;
+  max-width: 320px;
+}
+body.design-laboral .profile-content h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 1rem;
+}
+body.design-laboral .footer-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  body.design-laboral .profile .wrap {
+    grid-template-columns: 1fr;
+  }
+  body.design-laboral .hero {
+    min-height: 80vh;
+  }
+  body.design-laboral .floating-lawyer-card {
+    right: 50%;
+    bottom: 0;
+    left: 50%;
+    width: calc(100% - 2rem);
+    max-width: 320px;
+    transform: translate(-50%, 100%);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+  body.design-laboral .floating-lawyer-card.visible {
+    transform: translate(-50%, 0);
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "site_key": "laboral",
+  "lawyer_type": "Derecho Laboral",
+  "name": "María González - Abogada Laboral",
+  "tagline": "Te ayudo a defender tus derechos en el trabajo",
+  "whatsapp_number": "573001234567",
+  "city": "Bogotá",
+  "phone": "+57 300 123 4567",
+  "colors": {
+    "primary": "#1a365d",
+    "primaryLight": "#2c5282",
+    "accent": "#ed8936",
+    "text": "#2d3748",
+    "background": "#f7fafc"
+  },
+  "images": {
+    "hero": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200",
+    "profile": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400"
+  },
+  "hero": {
+    "title": "¿Tu empleador no te paga lo que corresponde?",
+    "subtitle": "Te ayudo a reclamar lo que es tuyo, sin tecnicismos. Primera consulta para entender tu caso.",
+    "cta_text": "Consultar mi caso",
+    "whatsapp_text": "Escribir por WhatsApp"
+  },
+  "trust_indicators": [
+    { "text": "Más de 300 casos asesorados", "icon": "experience" },
+    { "text": "Consultas confidenciales", "icon": "confidential" },
+    { "text": "Estrategia legal personalizada", "icon": "personalized" },
+    { "text": "Respuesta rápida", "icon": "fast" }
+  ],
+  "problem_awareness": {
+    "title": "¿Estás viviendo alguna de estas situaciones?",
+    "subtitle": "Haz clic en la que se acerque a tu caso para contactarnos con el mensaje adecuado.",
+    "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800",
+    "items": [
+      { "label": "Me despidieron sin justa causa", "whatsapp_msg": "Hola, me despidieron sin justa causa y quiero asesoría." },
+      { "label": "No me pagaron mi liquidación", "whatsapp_msg": "Hola, no me pagaron mi liquidación y necesito ayuda." },
+      { "label": "Me deben horas extra", "whatsapp_msg": "Hola, me deben horas extra y no me las reconocen." },
+      { "label": "Acoso o maltrato en el trabajo", "whatsapp_msg": "Hola, estoy viviendo acoso o maltrato laboral y necesito orientación." }
+    ]
+  },
+  "why_trust_title": "Por qué confiar en mi asesoría",
+  "why_trust_subtitle": "Compromiso con tu caso desde el primer contacto.",
+  "why_trust_me": [
+    { "title": "Orientación legal transparente", "description": "Te explico las opciones reales y los posibles resultados sin exagerar." },
+    { "title": "Lenguaje claro, sin tecnicismos", "description": "Hablamos en términos que entiendes para que tomes decisiones informadas." },
+    { "title": "Análisis personalizado de tu caso", "description": "Cada situación es distinta; revisamos tu caso en concreto." },
+    { "title": "Estrategia de negociación sólida", "description": "Trabajamos para lograr el mejor resultado dentro de la ley." }
+  ],
+  "education": {
+    "title": "Lo que conviene que sepas sobre tus derechos",
+    "subtitle": "Información clara para que tomes mejores decisiones.",
+    "items": [
+      "Tienes derecho a una liquidación cuando te despiden, según tu tipo de contrato y tiempo de servicio.",
+      "Las horas extra deben ser reconocidas y pagadas; no pueden compensarse solo con tiempo libre sin tu acuerdo.",
+      "El acoso laboral está prohibido; puedes denunciar y buscar medidas de protección.",
+      "Un despido sin justa causa puede dar lugar a indemnizaciones y reposición, según el caso."
+    ]
+  },
+  "help_buttons": [
+    { "id": "despido", "label": "Me despidieron", "whatsapp_msg": "Hola, me despidieron y quiero asesoría.", "icon": "briefcase" },
+    { "id": "salarios", "label": "No me pagan bien", "whatsapp_msg": "Hola, tengo dudas sobre mis salarios o prestaciones.", "icon": "money" },
+    { "id": "horas", "label": "Horas extra sin pagar", "whatsapp_msg": "Hola, trabajo horas extra y no me las reconocen.", "icon": "clock" },
+    { "id": "acoso", "label": "Acoso en el trabajo", "whatsapp_msg": "Hola, estoy viviendo acoso laboral y necesito orientación.", "icon": "shield" },
+    { "id": "otro", "label": "Otro tema laboral", "whatsapp_msg": "Hola, tengo una consulta sobre un tema laboral.", "icon": "document" }
+  ],
+  "services": [
+    { "title": "Despidos e indemnizaciones", "description": "Revisamos si tu despido fue justo y qué puedes reclamar.", "icon": "briefcase", "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600" },
+    { "title": "Salarios y prestaciones", "description": "Liquidaciones, vacaciones, cesantías y todo lo que te deben.", "icon": "money" },
+    { "title": "Horas extra y convenios", "description": "Que reconozcan y paguen tus horas adicionales.", "icon": "clock" },
+    { "title": "Acoso y ambiente laboral", "description": "Te acompañamos cuando el ambiente de trabajo no es respetuoso.", "icon": "shield" }
+  ],
+  "timeline_title": "Así trabajamos tu caso",
+  "timeline_steps": [
+    { "title": "Consulta inicial", "desc": "Me cuentas tu situación en confianza." },
+    { "title": "Análisis legal", "desc": "Revisamos documentos y te digo si hay opciones." },
+    { "title": "Estrategia", "desc": "Te explico el camino posible y los plazos." },
+    { "title": "Representación", "desc": "Si decides continuar, te acompaño en el proceso." },
+    { "title": "Seguimiento", "desc": "Buscamos el mejor resultado para ti." }
+  ],
+  "cases_title": "Casos que atiendo con frecuencia",
+  "cases": [
+    "Me despidieron sin justa causa",
+    "No me pagan liquidación",
+    "No me reconocen horas extra",
+    "Acoso laboral o ambiente hostil",
+    "Cambios de condiciones sin mi consentimiento"
+  ],
+  "profile_title": "Sobre mí",
+  "profile_text": "Muchos de mis clientes llegan preocupados porque no saben si su caso tiene solución. Mi trabajo es analizar tu situación y explicarte con claridad cuáles son tus opciones. No uso palabras complicadas: hablo como lo haría contigo en una cafetería.",
+  "profile_image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400",
+  "testimonials": [
+    { "name": "Carlos M.", "city": "Bogotá", "text": "Me ayudó a recuperar mi liquidación. Muy clara y profesional." },
+    { "name": "Ana L.", "city": "Medellín", "text": "Sentí confianza desde la primera consulta. Recomendada." },
+    { "name": "Roberto P.", "city": "Cali", "text": "Resolvió mi caso de horas extra. Todo transparente." }
+  ],
+  "cta_title": "Cuéntanos tu caso y te diremos si podemos ayudarte",
+  "cta_subtitle": "Sin compromiso. Escríbenos por WhatsApp o usa el formulario.",
+  "contact_title": "Formulario de contacto",
+  "contact_intro": "Completa los datos y te respondemos a la brevedad.",
+  "footer_links": []
+}

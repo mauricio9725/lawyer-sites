@@ -1,0 +1,354 @@
+/**
+ * Familia – Emocional, humano, storytelling
+ * Imagen izquierda/derecha alternada. Sin bloques vacíos: todas las columnas con imagen o contenido.
+ */
+body.design-familia {
+  margin: 0;
+  background: var(--bg);
+}
+
+body.design-familia .site-header--minimal {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 16px rgba(44, 95, 79, 0.06);
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+body.design-familia .site-header--minimal.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 20px rgba(44, 95, 79, 0.12);
+}
+body.design-familia .header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+body.design-familia .header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+body.design-familia .header-lawyer-photo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid rgba(44, 95, 79, 0.2);
+}
+body.design-familia .header-lawyer-photo { display: none; }
+body.design-familia .header-lawyer-photo[src]:not([src=""]) { display: block; }
+body.design-familia .site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+body.design-familia .site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  padding: 0.35rem 0;
+  transition: color 0.2s ease;
+}
+body.design-familia .site-nav a:hover { color: var(--primary); }
+body.design-familia .hero-lawyer-presence {
+  margin-bottom: 1.25rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.15);
+  border-radius: 16px;
+  display: inline-block;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+body.design-familia .hero-lawyer-name {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0;
+  font-weight: 700;
+}
+body.design-familia .hero-lawyer-spec {
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.92);
+  margin: 0.2rem 0 0 0;
+  font-weight: 500;
+}
+body.design-familia .hero-ver-servicios {
+  display: inline-block;
+  margin-top: 1rem;
+  color: rgba(255,255,255,0.95);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: var(--radius);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+body.design-familia .hero-ver-servicios:hover {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+body.design-familia .hero-scroll-indicator {
+  display: inline-block;
+  margin-top: 1rem;
+  color: rgba(255,255,255,0.8);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  body.design-familia .hero-scroll-indicator { animation: familiaBounce 2s ease-in-out infinite; }
+}
+@keyframes familiaBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+body.design-familia .story-main { padding-top: 0; }
+
+/* Hero: imagen de fondo + overlay */
+body.design-familia .hero-story {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+body.design-familia .hero-story::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(44, 95, 79, 0.4) 0%, rgba(61, 122, 104, 0.35) 100%);
+  pointer-events: none;
+}
+body.design-familia .hero-story .hero-inner { position: relative; z-index: 1; }
+body.design-familia .hero-story h1 {
+  font-size: clamp(3rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--white);
+  text-shadow: 0 2px 16px rgba(0,0,0,0.2);
+}
+body.design-familia .hero-story .subtitle {
+  font-size: 1.125rem;
+  color: rgba(255,255,255,0.95);
+}
+
+/* Story rows: 50/50, siempre contenido visual */
+body.design-familia .story-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 0;
+  align-items: stretch;
+}
+body.design-familia .story-row--image-left { grid-template-areas: "media content"; }
+body.design-familia .story-row--image-left .story-media { grid-area: media; }
+body.design-familia .story-row--image-left .story-content { grid-area: content; }
+body.design-familia .story-row--image-right { grid-template-areas: "content media"; }
+body.design-familia .story-row--image-right .story-content { grid-area: content; }
+body.design-familia .story-row--image-right .story-media { grid-area: media; }
+
+/* Media: imagen real en cada bloque (Unsplash por defecto si no hay JSON) */
+body.design-familia .story-media {
+  min-height: 280px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body.design-familia #problem-section-image {
+  background-color: var(--primary);
+  background-image: linear-gradient(160deg, var(--primary) 0%, var(--primaryLight) 100%);
+}
+body.design-familia #problem-section-image[style*="background-image: url"] {
+  background-size: cover;
+  background-color: transparent;
+}
+body.design-familia .story-media--help {
+  background-color: var(--primaryLight);
+  background-image: linear-gradient(160deg, rgba(44,95,79,0.35) 0%, rgba(61,122,104,0.4) 100%), url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800");
+}
+body.design-familia .story-media--why {
+  background-color: var(--bg);
+  background-image: linear-gradient(180deg, rgba(44,95,79,0.12) 0%, transparent 50%), url("https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800");
+}
+body.design-familia .story-media--education {
+  background-color: var(--primary);
+  background-image: linear-gradient(160deg, rgba(44,95,79,0.38) 0%, rgba(61,122,104,0.4) 100%), url("https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800");
+}
+body.design-familia .story-media--profile {
+  min-height: 0;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bgAlt, #edf2f7);
+}
+body.design-familia .story-media--profile .profile-photo {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.1);
+}
+
+body.design-familia .story-content {
+  padding: 2rem 1.75rem;
+  display: flex;
+  align-items: center;
+}
+body.design-familia .story-content .wrap {
+  max-width: 480px;
+  margin: 0;
+  width: 100%;
+}
+
+/* ¿En qué te puedo ayudar? – estructura y alineación de tarjetas */
+body.design-familia .help-cards,
+body.design-familia #help-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+  margin-left: 0;
+  margin-right: 0;
+  align-items: stretch;
+}
+body.design-familia .help-card {
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Cards: hover */
+body.design-familia .help-card,
+body.design-familia .problem-card,
+body.design-familia .why-card,
+body.design-familia .service-card,
+body.design-familia .case-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+body.design-familia .help-card:hover,
+body.design-familia .problem-card:hover,
+body.design-familia .why-card:hover,
+body.design-familia .service-card:hover,
+body.design-familia .case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(85, 60, 154, 0.15);
+}
+
+/* Full-width rows: padding 80px, títulos 32–40px */
+body.design-familia .story-row--full {
+  min-height: 0;
+  padding: 5rem 1.5rem;
+  display: block;
+  text-align: center;
+}
+body.design-familia .story-row--full .section-title {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 800;
+}
+body.design-familia .story-row--full .section-subtitle,
+body.design-familia .story-content .wrap p { font-size: 1rem; line-height: 1.6; }
+body.design-familia .story-row--full .wrap {
+  max-width: var(--maxWidth, 1140px);
+  margin: 0 auto;
+}
+body.design-familia .trust-row { background: var(--white); }
+body.design-familia .timeline-row { background: var(--bgAlt, #f1f5f9); }
+
+body.design-familia .story-row--profile {
+  min-height: 0;
+  padding: 2rem 0;
+}
+body.design-familia .story-row--profile .story-content .wrap { max-width: 100%; text-align: left; }
+
+/* Scroll reveal */
+body.design-familia .reveal-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+body.design-familia .reveal-section.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#problem-section[style*="display: none"] { display: none !important; }
+
+body.design-familia .service-card .service-card-image { transition: transform 0.4s ease; }
+body.design-familia .service-card:hover .service-card-image { transform: scale(1.05); }
+@media (prefers-reduced-motion: reduce) {
+  body.design-familia .reveal-section { transition: opacity 0.4s ease; }
+  body.design-familia .reveal-section.reveal-visible { transform: none; }
+}
+
+/* Solo botón circular de WhatsApp (sin tarjeta flotante para no tapar contenido) */
+body.design-familia .floating-lawyer-card {
+  display: none !important;
+}
+
+/* Lawyer tooltip */
+body.design-familia .lawyer-tooltip {
+  position: fixed;
+  z-index: 300;
+  width: 240px;
+  padding: 1rem;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(44, 95, 79, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+body.design-familia .lawyer-tooltip.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+body.design-familia .lawyer-tooltip__photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+body.design-familia .lawyer-tooltip__text { font-size: 0.875rem; color: var(--text); margin: 0 0 0.5rem 0; line-height: 1.4; }
+/* Sin segundo icono WhatsApp en el tooltip (solo el verde de la tarjeta flotante) */
+body.design-familia .lawyer-tooltip__wa {
+  display: none;
+}
+body.design-familia .footer-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+body.design-familia .whatsapp-float {
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 999;
+}
+
+@media (max-width: 900px) {
+  body.design-familia .story-row,
+  body.design-familia .story-row--image-left,
+  body.design-familia .story-row--image-right {
+    grid-template-columns: 1fr;
+    grid-template-areas: "content" "media";
+  }
+  body.design-familia .story-row--image-left .story-media,
+  body.design-familia .story-row--image-right .story-media { order: 2; min-height: 220px; }
+  body.design-familia .story-row--profile { grid-template-areas: "media" "content"; }
+  body.design-familia .story-content { padding: 1.5rem 1rem; }
+}

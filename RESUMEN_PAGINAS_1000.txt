@@ -1,0 +1,17 @@
+================================================================================
+RESUMEN 1: QUÉ TIENEN LAS PÁGINAS (detalle de lo que incluyen)
+================================================================================
+Límite: 1000 caracteres.
+--------------------------------------------------------------------------------
+
+Las páginas son sitios web profesionales para abogados, pensados para conversión y confianza. Todas comparten un mismo backend (FastAPI, SQLite) y cinco variantes de diseño según el tipo de abogado: laboral, familia, penal, civil y general. Cada sitio se configura con un archivo JSON (nombre, número de WhatsApp, colores, textos) sin tocar código. Incluyen: hero con mensaje claro y humano, sin tecnicismos; sección "¿En qué te puedo ayudar?" con tres a cinco botones que cambian el contenido y el mensaje prellenado de WhatsApp; botón flotante de WhatsApp siempre visible que abre el chat con el número configurado y el mensaje según la opción elegida; línea de tiempo "Así trabajamos tu caso" en cinco pasos; bloque "Casos frecuentes" en lenguaje del cliente; perfil humano del abogado y CTA honesto ("Cuéntame tu caso"); formulario de contacto (nombre, email, teléfono, tipo de caso, mensaje) que envía los datos al backend y los guarda en base de datos. El panel de administración permite login simple y listar las consultas recibidas con filtros por sitio y fecha. Diseño responsive (mobile first), HTML/CSS/JS vanilla, sin frameworks pesados. Pensado para ser estable, fácil de mantener y replicable para nuevos clientes editando solo el JSON y una carpeta de tema.
+
+--------------------------------------------------------------------------------
+RESUMEN 2: QUÉ NO TIENEN (faltantes respecto a otros sitios o productos)
+--------------------------------------------------------------------------------
+Límite: 1000 caracteres.
+--------------------------------------------------------------------------------
+
+Estas páginas no incluyen: blog ni artículos legales; reserva de citas ni pagos en línea; chat en vivo en la web (solo formulario y enlace a WhatsApp); área de cliente ni seguimiento de casos; roles ni permisos avanzados en el panel; envío de correos automáticos al recibir una consulta; analytics o tracking integrado; CMS para editar textos desde el navegador (los textos se cambian en archivos JSON); varios idiomas; generación automática de meta tags SEO; galería de imágenes ni página de equipo; sección de testimonios o reseñas; integración con redes sociales más allá del enlace; microservicios ni arquitectura compleja; framework frontend (React, Vue, etc.); ni captcha ni protección avanzada contra spam en el formulario. El producto prioriza simplicidad y estabilidad: un backend único, temas configurables por JSON y un panel básico para ver consultas, adecuado para VPS sencillo y para vender o entregar sitios a distintos abogados sin añadir complejidad innecesaria.
+
+================================================================================

@@ -1,0 +1,465 @@
+/**
+ * General – Revista legal / portal
+ * Grid de tarjetas, bloques tipo artículo, contenido educativo. Azul + teal.
+ */
+body.design-general {
+  margin: 0;
+  background: var(--bg);
+}
+
+body.design-general .content-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header: sticky + nav */
+body.design-general .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 16px rgba(37, 99, 235, 0.08);
+  transition: box-shadow 0.25s ease;
+}
+body.design-general .site-header.scrolled {
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.12);
+}
+body.design-general .header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+body.design-general .header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+body.design-general .header-lawyer-photo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid rgba(37, 99, 235, 0.2);
+}
+body.design-general .header-lawyer-photo { display: none; }
+body.design-general .header-lawyer-photo[src]:not([src=""]) { display: block; }
+body.design-general .site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+body.design-general .site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  padding: 0.35rem 0;
+  transition: color 0.2s ease;
+}
+body.design-general .site-nav a:hover { color: var(--primary); }
+body.design-general .hero-lawyer-presence {
+  margin-bottom: 1.25rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.12);
+  border-radius: 12px;
+  display: inline-block;
+  backdrop-filter: blur(4px);
+}
+body.design-general .hero-lawyer-name {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0;
+  font-weight: 700;
+}
+body.design-general .hero-lawyer-spec {
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.92);
+  margin: 0.2rem 0 0 0;
+  font-weight: 500;
+}
+body.design-general .hero-ver-servicios {
+  display: inline-block;
+  margin-top: 1rem;
+  color: rgba(255,255,255,0.95);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 12px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+body.design-general .hero-ver-servicios:hover {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+body.design-general .hero-scroll-indicator {
+  display: inline-block;
+  margin-top: 1rem;
+  color: rgba(255,255,255,0.8);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  body.design-general .hero-scroll-indicator { animation: generalBounce 2s ease-in-out infinite; }
+}
+@keyframes generalBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* Hero: 80vh, imagen + overlay, título 48–64px */
+body.design-general .hero-editorial {
+  min-height: 80vh;
+  padding: 5rem 1.5rem;
+  text-align: center;
+  background-color: var(--primary);
+  background-image: linear-gradient(180deg, rgba(37, 99, 235, 0.55) 0%, rgba(37, 99, 235, 0.45) 100%), url("https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 24px 24px;
+  margin-bottom: 2rem;
+  position: relative;
+}
+body.design-general .hero-editorial::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0 0 24px 24px;
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.5) 0%, rgba(59, 130, 246, 0.4) 100%);
+  pointer-events: none;
+}
+body.design-general .hero-editorial .hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+}
+body.design-general .hero-editorial h1 {
+  font-size: clamp(3rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--white);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+body.design-general .hero-editorial .subtitle {
+  font-size: 1.125rem;
+  color: rgba(255,255,255,0.95);
+}
+
+/* Trust: inline strip */
+body.design-general .trust-inline {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+body.design-general .trust-inline .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Grid sections: padding 80px, títulos 32–40px */
+body.design-general .grid-section {
+  padding: 5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+body.design-general .grid-section .section-title {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 800;
+}
+body.design-general .grid-section .section-subtitle,
+body.design-general .editorial-grid .service-card p,
+body.design-general .editorial-grid .case-card .case-text { font-size: 1rem; line-height: 1.6; }
+body.design-general .grid-section .section-title {
+  margin-bottom: 0.75rem;
+}
+body.design-general .grid-section:nth-child(odd) { background: var(--white); }
+body.design-general .grid-section:nth-child(even) { background: var(--bg); }
+body.design-general .grid-section:last-of-type { border-bottom: 0; }
+body.design-general .grid-section--cards .wrap {
+  max-width: 100%;
+  width: 100%;
+}
+body.design-general #services-section {
+  background-image: linear-gradient(180deg, rgba(248,250,252,0.95) 0%, rgba(255,255,255,0.98) 100%), url("https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--bg);
+}
+body.design-general #cases-section {
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(247,250,252,0.97) 100%), url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--white);
+}
+/* Help section: 2-column layout con imagen */
+body.design-general .help-section-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 400px;
+  align-items: stretch;
+}
+body.design-general .help-section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  justify-content: center;
+}
+body.design-general .help-section-media {
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(135deg, rgba(37, 99, 235, 0.25) 0%, rgba(13, 148, 136, 0.2) 100%), url("https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800");
+}
+/* ¿En qué te puedo ayudar? – estructura y alineación */
+body.design-general #help-section .help-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 640px;
+  margin: 1rem auto 0;
+  align-items: stretch;
+}
+body.design-general #help-section .help-card {
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+body.design-general #help-section .content-area {
+  width: 100%;
+  max-width: 480px;
+  margin: 1rem auto 0;
+}
+body.design-general .grid-section--help {
+  padding: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+body.design-general .grid-section--help .wrap {
+  max-width: none;
+}
+@media (max-width: 768px) {
+  body.design-general .help-section-inner {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  body.design-general .help-section-media {
+    min-height: 240px;
+    order: 2;
+  }
+}
+body.design-general .grid-section--with-bg#problem-section {
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(247,250,252,0.98) 100%), url("https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--bg);
+}
+body.design-general .grid-section--with-bg#why-trust-section {
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(248,250,252,0.97) 100%), url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--bg);
+}
+body.design-general .grid-section--with-bg#timeline-section {
+  background-image: linear-gradient(180deg, rgba(248,250,252,0.95) 0%, rgba(255,255,255,0.98) 100%), url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--bg);
+}
+body.design-general .grid-section--with-bg#education-section {
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(247,250,252,0.96) 100%), url("https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1200");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--bg);
+}
+body.design-general .grid-section--with-bg#testimonials-section {
+  background-image: linear-gradient(180deg, rgba(248,250,252,0.94) 0%, rgba(255,255,255,0.98) 100%), url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--bg);
+}
+@media (prefers-reduced-motion: reduce) {
+  body.design-general .reveal-section { transition: opacity 0.4s ease; }
+  body.design-general .reveal-section.reveal-visible { transform: none; }
+}
+
+/* Editorial grid: 3 columns for services/cases */
+body.design-general .editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+body.design-general .editorial-grid .service-card,
+body.design-general .editorial-grid .case-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+}
+body.design-general .editorial-grid .service-card:hover,
+body.design-general .editorial-grid .case-card:hover {
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  transform: translateY(-6px);
+}
+body.design-general .editorial-grid .service-card .service-card-image {
+  transition: transform 0.4s ease;
+}
+body.design-general .editorial-grid .service-card:hover .service-card-image {
+  transform: scale(1.05);
+}
+
+/* Help y problem cards: hover revista */
+body.design-general .help-card,
+body.design-general .problem-card,
+body.design-general .why-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+body.design-general .help-card:hover,
+body.design-general .problem-card:hover,
+body.design-general .why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(30, 58, 95, 0.12);
+}
+
+/* Scroll reveal */
+body.design-general .reveal-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+body.design-general .reveal-section.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+body.design-general .editorial-grid .case-card .case-text {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+/* Article-style: narrow column for reading */
+body.design-general .grid-section--article .wrap--narrow {
+  max-width: 680px;
+  margin: 0 auto;
+}
+body.design-general .education-list--article {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+body.design-general .education-list--article li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding-left: 1.5rem;
+  position: relative;
+}
+body.design-general .education-list--article li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Profile: article block with image */
+body.design-general .profile-editorial .wrap {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  align-items: start;
+  max-width: 900px;
+}
+body.design-general .profile-editorial .profile-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+body.design-general .profile-editorial .profile-content h2 {
+  margin-top: 0;
+  font-size: var(--text-2xl);
+}
+body.design-general .profile-editorial .profile-photo-wrap {
+  max-width: 280px;
+}
+
+/* Solo botón circular de WhatsApp (sin tarjeta flotante) */
+body.design-general .floating-lawyer-card {
+  display: none !important;
+}
+
+/* Lawyer tooltip */
+body.design-general .lawyer-tooltip {
+  position: fixed;
+  z-index: 300;
+  width: 240px;
+  padding: 1rem;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+body.design-general .lawyer-tooltip.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+body.design-general .lawyer-tooltip__photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+body.design-general .lawyer-tooltip__text { font-size: 0.875rem; color: var(--text); margin: 0 0 0.5rem 0; line-height: 1.4; }
+/* Sin segundo icono WhatsApp en el tooltip (solo el verde de la tarjeta flotante) */
+body.design-general .lawyer-tooltip__wa {
+  display: none;
+}
+body.design-general .footer-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+body.design-general .btn-whatsapp--icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+body.design-general .btn-whatsapp--icon svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 700px) {
+  body.design-general .profile-editorial .wrap {
+    grid-template-columns: 1fr;
+  }
+  body.design-general .editorial-grid {
+    grid-template-columns: 1fr;
+  }
+  body.design-general .floating-lawyer-card {
+    right: 50%;
+    bottom: 0;
+    left: 50%;
+    width: calc(100% - 2rem);
+    max-width: 320px;
+    transform: translate(-50%, 100%);
+    border-radius: 12px 12px 0 0;
+  }
+  body.design-general .floating-lawyer-card.visible { transform: translate(-50%, 0); }
+}

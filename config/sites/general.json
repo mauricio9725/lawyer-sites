@@ -1,0 +1,97 @@
+{
+  "site_key": "general",
+  "lawyer_type": "Consultas Legales Generales",
+  "name": "Patricia López - Consultora Legal",
+  "tagline": "Orientación legal clara cuando no sabes por dónde empezar",
+  "whatsapp_number": "573001234567",
+  "city": "Bogotá",
+  "phone": "+57 300 123 4567",
+  "colors": {
+    "primary": "#1e3a5f",
+    "primaryLight": "#2d4a6f",
+    "accent": "#0d9488",
+    "text": "#2d3748",
+    "background": "#f0fdfa"
+  },
+  "images": {
+    "hero": "https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=1200",
+    "profile": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400"
+  },
+  "hero": {
+    "title": "¿Tienes un problema legal y no sabes si tiene solución?",
+    "subtitle": "Te ayudo a entender tu situación y a ver qué opciones tienes. Primera consulta para orientarte.",
+    "cta_text": "Consultar mi situación",
+    "whatsapp_text": "Escribir por WhatsApp"
+  },
+  "trust_indicators": [
+    { "text": "Más de 400 casos asesorados", "icon": "experience" },
+    { "text": "Consultas confidenciales", "icon": "confidential" },
+    { "text": "Atención personalizada", "icon": "personalized" },
+    { "text": "Respuesta rápida", "icon": "fast" }
+  ],
+  "problem_awareness": {
+    "title": "¿Tienes alguna de estas dudas?",
+    "subtitle": "Haz clic para contactarnos con el mensaje adecuado.",
+    "image": "https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=800",
+    "items": [
+      { "label": "Consulta legal general", "whatsapp_msg": "Hola, tengo una consulta legal y no sé por dónde empezar." },
+      { "label": "Revisar un documento", "whatsapp_msg": "Hola, necesito que revisen un documento legal." },
+      { "label": "Problema como consumidor", "whatsapp_msg": "Hola, tengo un problema como consumidor y quiero asesoría." }
+    ]
+  },
+  "why_trust_title": "Por qué confiar en mi asesoría",
+  "why_trust_subtitle": "Orientación clara desde el primer contacto.",
+  "why_trust_me": [
+    { "title": "Orientación transparente", "description": "Te digo qué se puede hacer y qué no, sin exagerar." },
+    { "title": "Lenguaje claro", "description": "Explico en términos que entiendas." },
+    { "title": "Derivación honesta", "description": "Si tu caso requiere un especialista, te lo digo y te oriento." }
+  ],
+  "education": {
+    "title": "Lo que conviene que sepas",
+    "subtitle": "Información básica para tomar decisiones.",
+    "items": [
+      "Tienes derechos como consumidor; las garantías y reclamos tienen plazos.",
+      "Un contrato debe leerse antes de firmar; podemos revisarlo contigo.",
+      "Ante la duda, una consulta a tiempo evita problemas mayores."
+    ]
+  },
+  "help_buttons": [
+    { "id": "consulta", "label": "Consulta general", "whatsapp_msg": "Hola, tengo una consulta legal y no sé por dónde empezar.", "icon": "document" },
+    { "id": "documento", "label": "Revisar un documento", "whatsapp_msg": "Hola, necesito que revisen un documento legal.", "icon": "briefcase" },
+    { "id": "empresa", "label": "Tema con empresa o negocio", "whatsapp_msg": "Hola, tengo un tema legal relacionado con mi empresa o negocio.", "icon": "briefcase" },
+    { "id": "consumidor", "label": "Problema como consumidor", "whatsapp_msg": "Hola, tengo un problema como consumidor y quiero asesoría.", "icon": "shield" },
+    { "id": "otro", "label": "Otro tema", "whatsapp_msg": "Hola, tengo una consulta legal.", "icon": "document" }
+  ],
+  "services": [
+    { "title": "Consultas legales", "description": "Orientación sobre derechos y obligaciones.", "icon": "document" },
+    { "title": "Revisión de documentos", "description": "Análisis de contratos y documentos.", "icon": "briefcase" },
+    { "title": "Empresas y negocios", "description": "Temas legales para empresas.", "icon": "briefcase" },
+    { "title": "Consumidor", "description": "Problemas con proveedores o garantías.", "icon": "shield" }
+  ],
+  "timeline_title": "Así trabajamos juntos",
+  "timeline_steps": [
+    { "title": "Consulta inicial", "desc": "Me cuentas tu situación sin compromiso." },
+    { "title": "Análisis", "desc": "Revisamos qué aplica a tu caso." },
+    { "title": "Opciones", "desc": "Te explico opciones y plazos en lenguaje claro." },
+    { "title": "Acompañamiento", "desc": "Si decides continuar, te guío en los pasos." },
+    { "title": "Seguimiento", "desc": "Hasta resolver tu duda o caso." }
+  ],
+  "cases_title": "Situaciones que suelo atender",
+  "cases": [
+    "Consultas sobre derechos y obligaciones",
+    "Revisión de contratos y documentos",
+    "Problemas con empresas, proveedores o clientes",
+    "Temas de consumo y garantías",
+    "Orientación para saber si necesitas un especialista"
+  ],
+  "profile_title": "Sobre mí",
+  "profile_text": "Mi rol es escucharte, ordenar el problema y decirte con honestidad qué se puede hacer. Si tu caso requiere un especialista, te lo digo y te oriento. Sin tecnicismos ni ventas forzadas.",
+  "profile_image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400",
+  "testimonials": [
+    { "name": "Andrea S.", "city": "Bogotá", "text": "Me orientó y me derivó al especialista correcto. Muy útil." }
+  ],
+  "cta_title": "Cuéntanos tu situación y te diremos si podemos ayudarte",
+  "cta_subtitle": "Sin compromiso. Escríbenos por WhatsApp o usa el formulario.",
+  "contact_title": "Formulario de contacto",
+  "contact_intro": "Completa los datos y te respondemos a la brevedad."
+}

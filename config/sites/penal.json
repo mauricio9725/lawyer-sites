@@ -1,0 +1,97 @@
+{
+  "site_key": "penal",
+  "lawyer_type": "Derecho Penal",
+  "name": "Carmen Ruiz - Defensa Penal",
+  "tagline": "Defensa seria y cercana cuando más la necesitas",
+  "whatsapp_number": "573001234567",
+  "city": "Cali",
+  "phone": "+57 300 123 4567",
+  "colors": {
+    "primary": "#1e3a5f",
+    "primaryLight": "#2d4a6f",
+    "accent": "#0d9488",
+    "text": "#334155",
+    "background": "#f8fafc"
+  },
+  "images": {
+    "hero": "https://images.unsplash.com/photo-1589994965851-df059e2d4d2f?w=1200",
+    "profile": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400"
+  },
+  "hero": {
+    "title": "¿Tú o un familiar enfrentan una acusación?",
+    "subtitle": "Te escucho, reviso tu caso y te explico las opciones de defensa. Discreción total.",
+    "cta_text": "Consultar mi caso",
+    "whatsapp_text": "Escribir por WhatsApp"
+  },
+  "trust_indicators": [
+    { "text": "Más de 250 casos asesorados", "icon": "experience" },
+    { "text": "Total discreción", "icon": "confidential" },
+    { "text": "Atención personalizada", "icon": "personalized" },
+    { "text": "Respuesta rápida", "icon": "fast" }
+  ],
+  "problem_awareness": {
+    "title": "¿Estás en alguna de estas situaciones?",
+    "subtitle": "Haz clic para contactarnos con el mensaje adecuado.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800",
+    "items": [
+      { "label": "Detención o captura", "whatsapp_msg": "Hola, hay una detención y necesito defensa urgente." },
+      { "label": "Investigación en mi contra", "whatsapp_msg": "Hola, estoy o un familiar está siendo investigado." },
+      { "label": "Audiencia o proceso en curso", "whatsapp_msg": "Hola, tengo audiencia o proceso penal en curso." }
+    ]
+  },
+  "why_trust_title": "Por qué confiar en mi defensa",
+  "why_trust_subtitle": "Compromiso y discreción desde el primer contacto.",
+  "why_trust_me": [
+    { "title": "Orientación transparente", "description": "Te explico el proceso y las opciones reales." },
+    { "title": "Discreción total", "description": "Tu caso se trata con la máxima confidencialidad." },
+    { "title": "Estrategia clara", "description": "Definimos juntos los pasos y expectativas." }
+  ],
+  "education": {
+    "title": "Lo que conviene que sepas",
+    "subtitle": "Información clara sobre el proceso penal.",
+    "items": [
+      "Tienes derecho a un abogado desde la detención o indagación.",
+      "La libertad provisional puede solicitarse en las etapas previas al juicio.",
+      "Cada etapa del proceso tiene plazos y opciones; te las explico con claridad."
+    ]
+  },
+  "help_buttons": [
+    { "id": "detenido", "label": "Detención / captura", "whatsapp_msg": "Hola, hay una detención o captura y necesito defensa urgente.", "icon": "shield" },
+    { "id": "investigacion", "label": "Investigación en mi contra", "whatsapp_msg": "Hola, estoy o un familiar está siendo investigado.", "icon": "document" },
+    { "id": "audiencia", "label": "Audiencia o proceso en curso", "whatsapp_msg": "Hola, tengo audiencia o proceso penal en curso.", "icon": "briefcase" },
+    { "id": "libertad", "label": "Solicitud de libertad", "whatsapp_msg": "Hola, necesito asesoría para solicitud de libertad.", "icon": "shield" },
+    { "id": "otro", "label": "Otro tema penal", "whatsapp_msg": "Hola, tengo una consulta de derecho penal.", "icon": "document" }
+  ],
+  "services": [
+    { "title": "Defensa en investigación", "description": "Te acompañamos desde la fase de investigación.", "icon": "document", "image": "https://images.unsplash.com/photo-1589994965851-df059e2d4d2f?w=600" },
+    { "title": "Libertad provisional", "description": "Solicitudes de libertad y medidas cautelares.", "icon": "shield" },
+    { "title": "Audiencias y juicio", "description": "Representación en todas las etapas del proceso.", "icon": "briefcase" },
+    { "title": "Recursos y apelaciones", "description": "Impugnación de decisiones cuando hay lugar.", "icon": "document" }
+  ],
+  "timeline_title": "Así trabajamos tu defensa",
+  "timeline_steps": [
+    { "title": "Consulta inicial", "desc": "Revisamos tu situación y documentos con confidencialidad." },
+    { "title": "Análisis legal", "desc": "Te explico el proceso y las posibles salidas." },
+    { "title": "Estrategia", "desc": "Armamos la estrategia de defensa." },
+    { "title": "Representación", "desc": "Te represento en audiencias y diligencias." },
+    { "title": "Seguimiento", "desc": "Acompañamiento hasta la resolución del caso." }
+  ],
+  "cases_title": "Casos que atiendo",
+  "cases": [
+    "Defensa en investigación o proceso penal",
+    "Solicitudes de libertad (provisional, condicional)",
+    "Audiencias y representación en juicio",
+    "Recursos y apelaciones",
+    "Asesoría a familiares del imputado"
+  ],
+  "profile_title": "Sobre mí",
+  "profile_text": "Muchos de mis clientes llegan con miedo y sin saber qué esperar. Mi trabajo es ser clara: te digo qué podemos hacer, en cuánto tiempo y con qué expectativas reales. Trabajo con seriedad y sin promesas vacías.",
+  "profile_image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400",
+  "testimonials": [
+    { "name": "Familia G.", "city": "Cali", "text": "Nos acompañó en un momento muy difícil. Profesional y humana." }
+  ],
+  "cta_title": "Cuéntanos tu caso y te diremos si podemos ayudarte",
+  "cta_subtitle": "Discreción total. Escríbenos por WhatsApp o usa el formulario.",
+  "contact_title": "Formulario de contacto",
+  "contact_intro": "Completa los datos y te respondemos a la brevedad."
+}

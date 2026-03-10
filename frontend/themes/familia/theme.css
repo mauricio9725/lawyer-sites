@@ -1,0 +1,10 @@
+/* Familia: humano, cálido, cercano – beige, verde suave, azul claro */
+:root {
+  --primary: #2c5f4f;
+  --primaryLight: #3d7a68;
+  --accent: #4a90a4;
+  --text: #2d3748;
+  --textMuted: #4a5568;
+  --bg: #f5f0e8;
+  --white: #ffffff;
+}

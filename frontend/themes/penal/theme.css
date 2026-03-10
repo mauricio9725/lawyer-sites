@@ -1,0 +1,10 @@
+/* Penal: fuerte, serio, dramático – negro, rojo oscuro, gris */
+:root {
+  --primary: #1a1a1a;
+  --primaryLight: #2d2d2d;
+  --accent: #8b2635;
+  --text: #334155;
+  --textMuted: #64748b;
+  --bg: #f1f5f9;
+  --white: #ffffff;
+}

@@ -1,0 +1,396 @@
+/**
+ * Design 4 – Conversion Landing (civil)
+ * Strong CTAs, sticky bar, inline CTA block, testimonials early, tighter sections.
+ */
+body.design-civil {
+  margin: 0;
+  padding-top: 0;
+}
+
+/* Compact header: sticky, nav + WhatsApp */
+body.design-civil .site-header--compact {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 16px rgba(30, 58, 95, 0.08);
+  transition: box-shadow 0.25s ease;
+}
+body.design-civil .site-header--compact.scrolled {
+  box-shadow: 0 4px 20px rgba(30, 58, 95, 0.12);
+}
+body.design-civil .site-header--compact .wrap,
+body.design-civil .site-header--compact .header-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+}
+body.design-civil .site-header--compact .tagline { display: none; }
+body.design-civil .header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+body.design-civil .header-lawyer-photo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid rgba(30, 58, 95, 0.2);
+}
+body.design-civil .header-lawyer-photo { display: none; }
+body.design-civil .header-lawyer-photo[src]:not([src=""]) { display: block; }
+body.design-civil .site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+body.design-civil .site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  padding: 0.35rem 0;
+  transition: color 0.2s ease;
+}
+body.design-civil .site-nav a:hover { color: var(--primary); }
+body.design-civil .hero-lawyer-presence {
+  margin-bottom: 1.25rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.15);
+  border-radius: 8px;
+  display: inline-block;
+  backdrop-filter: blur(4px);
+}
+body.design-civil .hero-lawyer-name {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0;
+  font-weight: 700;
+}
+body.design-civil .hero-lawyer-spec {
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.92);
+  margin: 0.2rem 0 0 0;
+  font-weight: 500;
+}
+body.design-civil .hero-ver-servicios {
+  display: inline-block;
+  margin-top: 1rem;
+  color: rgba(255,255,255,0.95);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+body.design-civil .hero-ver-servicios:hover {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+body.design-civil .hero-scroll-indicator {
+  display: inline-block;
+  margin-top: 1rem;
+  color: rgba(255,255,255,0.8);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  body.design-civil .hero-scroll-indicator { animation: civilBounce 2s ease-in-out infinite; }
+}
+@keyframes civilBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+body.design-civil .header-wa {
+  display: none;
+  background: #25d366;
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: var(--text-sm);
+}
+body.design-civil .header-wa:hover { opacity: 0.95; color: var(--white); }
+
+/* Sticky CTA bar - oculto para alinear con Laboral */
+body.design-civil .sticky-cta-bar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 1.5rem;
+  background: var(--primary);
+  color: var(--white);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+body.design-civil .sticky-cta-bar.visible { transform: translateY(0); }
+body.design-civil .sticky-cta-text { font-weight: 600; font-size: var(--text-sm); }
+body.design-civil .btn-whatsapp--sticky {
+  background: #25d366;
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Hero: 80vh, imagen + overlay, título 48–64px */
+body.design-civil .hero-compact {
+  min-height: 80vh;
+  padding: 5rem 1.5rem;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+body.design-civil .hero-compact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(30, 58, 95, 0.4) 0%, rgba(44, 82, 130, 0.35) 100%);
+  pointer-events: none;
+}
+body.design-civil .hero-compact .hero-inner { position: relative; z-index: 1; }
+body.design-civil .hero-compact h1 {
+  font-size: clamp(3rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--white);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+body.design-civil .hero-compact .subtitle { color: rgba(255,255,255,0.95); font-size: 1.125rem; }
+body.design-civil .hero-buttons--stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+  max-width: 320px;
+  margin: 0 auto;
+}
+body.design-civil .btn-wa-hero {
+  display: inline-block;
+  background: #25d366;
+  color: var(--white);
+  padding: 0.875rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+body.design-civil .btn-wa-hero:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.4); color: var(--white); }
+
+/* Trust badges: single row, tight */
+body.design-civil .trust-badges {
+  padding: 1.25rem 1.5rem;
+  background: var(--white);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+body.design-civil .trust-badges .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+body.design-civil .trust-badges .trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  background: var(--bg);
+  border-radius: 999px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+body.design-civil .trust-badges .trust-icon { font-size: 1rem; }
+
+/* Inline CTA block (mid-page) */
+body.design-civil .cta-inline {
+  padding: 1.5rem 1.5rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primaryLight) 100%);
+  color: var(--white);
+  text-align: center;
+}
+body.design-civil .cta-inline .wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+body.design-civil .cta-inline-text { margin: 0; font-weight: 600; font-size: var(--text-lg); }
+body.design-civil .btn-whatsapp--large {
+  background: #25d366;
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+body.design-civil .btn-whatsapp--large:hover { transform: translateY(-2px); color: var(--white); }
+
+/* Secciones: padding 80px, títulos 32–40px */
+body.design-civil .landing-main .help-compact,
+body.design-civil .landing-main .problem-awareness,
+body.design-civil .landing-main .why-trust--compact,
+body.design-civil .landing-main .services-compact,
+body.design-civil .landing-main .timeline-compact,
+body.design-civil .landing-main .education,
+body.design-civil .landing-main .cases-compact,
+body.design-civil .landing-main .profile-compact,
+body.design-civil .landing-main .testimonials-compact,
+body.design-civil .landing-main .contact {
+  padding: 5rem 1.5rem;
+}
+body.design-civil .section-title {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+body.design-civil .section-subtitle,
+body.design-civil .help-card,
+body.design-civil .service-card p { font-size: 1rem; line-height: 1.6; }
+body.design-civil .help-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+body.design-civil .profile-compact .wrap {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body.design-civil .profile-compact .profile-photo-wrap {
+  flex-shrink: 0;
+}
+body.design-civil .profile-compact .profile-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+body.design-civil .cta-repeat { padding: 5rem 1.5rem; }
+
+/* Sin bloques vacíos: fondos con imagen sutil */
+body.design-civil .problem-awareness {
+  background-image: linear-gradient(180deg, rgba(247,250,252,0.92) 0%, rgba(255,255,255,0.97) 100%), url("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--bg);
+}
+body.design-civil .service-card .service-card-image { transition: transform 0.4s ease; }
+body.design-civil .service-card:hover .service-card-image { transform: scale(1.05); }
+@media (prefers-reduced-motion: reduce) {
+  body.design-civil .reveal-section { transition: opacity 0.4s ease; }
+  body.design-civil .reveal-section.reveal-visible { transform: none; }
+}
+body.design-civil .why-trust--compact {
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(247,250,252,0.98) 100%), url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--white);
+}
+body.design-civil .services-compact {
+  background-image: linear-gradient(180deg, rgba(248,250,252,0.95) 0%, rgba(255,255,255,0.98) 100%), url("https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--bg);
+}
+body.design-civil .cases-compact { background: var(--white); }
+body.design-civil .timeline-compact {
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(248,250,252,0.97) 100%), url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--bg);
+}
+body.design-civil .profile-compact { background: var(--bg); }
+
+/* Cards: micro interacción */
+body.design-civil .help-card,
+body.design-civil .problem-card,
+body.design-civil .why-card,
+body.design-civil .service-card,
+body.design-civil .case-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+body.design-civil .help-card:hover,
+body.design-civil .problem-card:hover,
+body.design-civil .why-card:hover,
+body.design-civil .service-card:hover,
+body.design-civil .case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Scroll reveal */
+body.design-civil .reveal-section {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+}
+body.design-civil .reveal-section.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Solo botón circular de WhatsApp (sin tarjeta flotante) */
+body.design-civil .floating-lawyer-card {
+  display: none !important;
+}
+
+/* Lawyer tooltip */
+body.design-civil .lawyer-tooltip {
+  position: fixed;
+  z-index: 300;
+  width: 240px;
+  padding: 1rem;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(30, 58, 95, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+body.design-civil .lawyer-tooltip.visible { opacity: 1; visibility: visible; pointer-events: auto; }
+body.design-civil .lawyer-tooltip__photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+body.design-civil .lawyer-tooltip__text { font-size: 0.875rem; color: var(--text); margin: 0 0 0.5rem 0; line-height: 1.4; }
+/* Sin segundo icono WhatsApp en el tooltip (solo el verde de la tarjeta flotante) */
+body.design-civil .lawyer-tooltip__wa {
+  display: none;
+}
+body.design-civil .footer-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+@media (max-width: 640px) {
+  body.design-civil .sticky-cta-bar { flex-direction: column; gap: 0.4rem; padding: 0.5rem 1rem; }
+  body.design-civil .sticky-cta-text { font-size: var(--text-xs); }
+}

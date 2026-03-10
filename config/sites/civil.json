@@ -1,0 +1,97 @@
+{
+  "site_key": "civil",
+  "lawyer_type": "Derecho Civil y Contratos",
+  "name": "Ana Beltrán - Civil y Contratos",
+  "tagline": "Contratos claros y solución de conflictos civiles",
+  "whatsapp_number": "573001234567",
+  "city": "Bogotá",
+  "phone": "+57 300 123 4567",
+  "colors": {
+    "primary": "#234e52",
+    "primaryLight": "#285e61",
+    "accent": "#2b6cb0",
+    "text": "#2d3748",
+    "background": "#e6fffa"
+  },
+  "images": {
+    "hero": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200",
+    "profile": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400"
+  },
+  "hero": {
+    "title": "¿Un contrato te genera problemas o necesitas uno bien hecho?",
+    "subtitle": "Te ayudo a entender tus obligaciones, reclamar lo que te deben o redactar acuerdos que te protejan.",
+    "cta_text": "Consultar mi caso",
+    "whatsapp_text": "Escribir por WhatsApp"
+  },
+  "trust_indicators": [
+    { "text": "Más de 200 casos asesorados", "icon": "experience" },
+    { "text": "Consultas confidenciales", "icon": "confidential" },
+    { "text": "Atención personalizada", "icon": "personalized" },
+    { "text": "Respuesta rápida", "icon": "fast" }
+  ],
+  "problem_awareness": {
+    "title": "¿Estás en alguna de estas situaciones?",
+    "subtitle": "Haz clic para contactarnos.",
+    "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800",
+    "items": [
+      { "label": "Necesito redactar o revisar un contrato", "whatsapp_msg": "Hola, necesito redactar o revisar un contrato." },
+      { "label": "No cumplieron un acuerdo", "whatsapp_msg": "Hola, la otra parte no cumplió un contrato o acuerdo." },
+      { "label": "Necesito cobrar una deuda", "whatsapp_msg": "Hola, necesito asesoría para cobrar una deuda." }
+    ]
+  },
+  "why_trust_title": "Por qué confiar en mi asesoría",
+  "why_trust_subtitle": "Soluciones prácticas y claras.",
+  "why_trust_me": [
+    { "title": "Contratos claros", "description": "Redactamos o revisamos acuerdos que te protejan." },
+    { "title": "Lenguaje accesible", "description": "Te explico tus obligaciones y derechos sin rodeos." },
+    { "title": "Estrategia práctica", "description": "Buscamos la solución más efectiva para tu caso." }
+  ],
+  "education": {
+    "title": "Lo que conviene que sepas",
+    "subtitle": "Información básica sobre contratos y reclamaciones.",
+    "items": [
+      "Un contrato bien redactado evita conflictos; conviene revisarlo antes de firmar.",
+      "El incumplimiento contractual puede dar lugar a indemnizaciones o resolución.",
+      "Las deudas pueden reclamarse por vía judicial cuando no hay voluntad de pago."
+    ]
+  },
+  "help_buttons": [
+    { "id": "contrato", "label": "Redactar o revisar contrato", "whatsapp_msg": "Hola, necesito redactar o revisar un contrato.", "icon": "document" },
+    { "id": "incumplimiento", "label": "No cumplieron un acuerdo", "whatsapp_msg": "Hola, la otra parte no cumplió un contrato o acuerdo.", "icon": "briefcase" },
+    { "id": "deudas", "label": "Cobro de deudas", "whatsapp_msg": "Hola, necesito asesoría para cobrar una deuda.", "icon": "money" },
+    { "id": "danos", "label": "Daños y perjuicios", "whatsapp_msg": "Hola, quiero reclamar daños y perjuicios.", "icon": "shield" },
+    { "id": "otro", "label": "Otro tema civil", "whatsapp_msg": "Hola, tengo una consulta de derecho civil o contratos.", "icon": "document" }
+  ],
+  "services": [
+    { "title": "Contratos", "description": "Redacción y revisión de arrendamiento, compraventa, servicios.", "icon": "document" },
+    { "title": "Incumplimiento", "description": "Reclamaciones cuando no cumplen un acuerdo.", "icon": "briefcase" },
+    { "title": "Cobro de deudas", "description": "Asesoría para cobrar lo que te deben.", "icon": "money" },
+    { "title": "Daños y perjuicios", "description": "Reclamación de indemnizaciones.", "icon": "shield" }
+  ],
+  "timeline_title": "Así trabajamos tu caso",
+  "timeline_steps": [
+    { "title": "Consulta inicial", "desc": "Revisamos documentos y tu versión del asunto." },
+    { "title": "Análisis legal", "desc": "Te explico qué dice la ley y qué puedes exigir." },
+    { "title": "Estrategia", "desc": "Definimos si negociar, demandar o ambas." },
+    { "title": "Representación", "desc": "Te represento o guío en el proceso." },
+    { "title": "Seguimiento", "desc": "Buscamos la solución más práctica para ti." }
+  ],
+  "cases_title": "Casos que atiendo con frecuencia",
+  "cases": [
+    "Redacción y revisión de contratos",
+    "Incumplimiento contractual y reclamaciones",
+    "Cobro de deudas y ejecución de garantías",
+    "Daños y perjuicios",
+    "Responsabilidad civil y temas vecinales"
+  ],
+  "profile_title": "Sobre mí",
+  "profile_text": "Me gusta que los acuerdos queden claros desde el inicio y que sepas qué hacer cuando algo sale mal. Te explico sin rodeos y trabajo para que obtengas resultados concretos.",
+  "profile_image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400",
+  "testimonials": [
+    { "name": "Luis F.", "city": "Bogotá", "text": "Me ayudó a recuperar lo que me debían. Muy clara." }
+  ],
+  "cta_title": "Cuéntanos tu caso y te diremos si podemos ayudarte",
+  "cta_subtitle": "Sin compromiso. Escríbenos por WhatsApp o usa el formulario.",
+  "contact_title": "Formulario de contacto",
+  "contact_intro": "Completa los datos y te respondemos a la brevedad."
+}
